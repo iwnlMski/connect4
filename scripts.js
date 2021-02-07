@@ -74,73 +74,10 @@ function checkWin() {
 }
 
 
-var col0 = $('#0');
-console.log(col0)
-// var col1 = $('#1');
-// var col2 = $('#2');
-// var col3 = $('#3');
-// var col4 = $('#4');
-// var col5 = $('#5');
-// var col6 = $('#6');
-
-columns = $('.game_column');
-
-columns.each(function (i, column) {
-    // console.log(i);
-    // console.log(column)
-
-    console.log($(column))
+$('.game_column').each(function (i, column) {
     $(column).click(function () {
-        console.log('dupa')
-        id = column.attr('id')
-        console.log(id);
-        putShot(id, currentColor);
+        putShot($(column).attr('id'), currentColor);
         changeColor();
         checkWin();
     })
-
 });
-
-
-//
-col0.click(function(){
-    putShot(0, currentColor);
-    changeColor();
-    checkWin();
-})
-//
-// col1.click(function(){
-//     putShot(1, currentColor);
-//     changeColor();
-//     checkWin();
-// })
-//
-// col2.click(function(){
-//     putShot(2, currentColor);
-//     changeColor();
-//     checkWin();
-// })
-//
-// col3.click(function(){
-//     putShot(3, currentColor);
-//     changeColor();
-//     checkWin();
-// })
-//
-// col4.click(function(){
-//     putShot(4, currentColor);
-//     changeColor();
-//     checkWin();
-// })
-//
-// col5.click(function(){
-//     putShot(5, currentColor);
-//     changeColor();
-//     checkWin();
-// })
-//
-// col6.click(function(){
-//     putShot(6, currentColor);
-//     changeColor();
-//     checkWin();
-// })
