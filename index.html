@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container text-center">
+    <h1>Welcome to Connect Four!</h1>
+    <h2>The object of this game is to connect four of your chips in a row!</h2>
+    <h3>Player <span id="nPLayer">One</span>: it is your turn, please pick a column to drop your <span id="nColor">🔵</span> chip</h3>
+</div>
+
+<div class="container">
+    <div class="row row-cols-7 mx-auto col-sm-9">
+        <div class="col"><span class="game_column" id="0"></span></div>
+        <div class="col"><span class="game_column" id="1"></span></div>
+        <div class="col"><span class="game_column" id="2"></span></div>
+        <div class="col"><span class="game_column" id="3"></span></div>
+        <div class="col"><span class="game_column" id="4"></span></div>
+        <div class="col"><span class="game_column" id="5"></span></div>
+        <div class="col"><span class="game_column" id="6"></span></div>
+    </div>
+    <div class="row row-cols-7 mx-auto col-sm-9">
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+    </div>
+    <div class="row row-cols-7 mx-auto col-sm-9">
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+    </div>
+    <div class="row row-cols-7 mx-auto col-sm-9">
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+    </div>
+    <div class="row row-cols-7 mx-auto col-sm-9">
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+    </div>
+    <div class="row row-cols-7 mx-auto col-sm-9">
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+        <div class="col"><span class="circle"></span></div>
+    </div>
+</div>
+
+</body>
+<script src="scripts.js"></script>
+</html>

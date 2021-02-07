@@ -1,0 +1,8 @@
+.circle, .game_column{
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+    border: black solid 3px;
+}
