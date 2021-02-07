@@ -1,16 +1,18 @@
 // playerBlue = prompt("Player One is playing blue chips \n Enter your name: ")
 // playerRed = prompt("Player Two is playing red chips \n Enter your name: ")
 //
+
+var redChip = '🔴'
+var blueChip = '🔵'
+var currentColor = redChip;
+$('#nColor').text(redChip)
+
 var circles = $('.circle');
-
-
-var currentColor = 'red';
-
 function putShot(nCol, color) {
     if (circles.eq(nCol).css('background-color') == 'rgb(128, 128, 128)') {
         for (var i = 35 + nCol; i >= 0; i = i - 7) {
             if (circles.eq(i).css('background-color') == 'rgb(128, 128, 128)') {
-                circles.eq(i).css('background-color', color);
+                circles.eq(i).css('background-color', color == redChip ? 'red' : 'blue');
                 break;
             }
         }
@@ -18,15 +20,9 @@ function putShot(nCol, color) {
 }
 
 function changeColor() {
-    if (currentColor == 'red') {
-        currentColor = 'blue';
-        $('#nPLayer').text('Two');
-        $('#nColor').text('🔵');
-    } else {
-        currentColor = 'red';
-        $('#nPLayer').text('One');
-        $('#nColor').text('🔴');
-    }
+    currentColor = currentColor == redChip ? blueChip : redChip
+    $('#nColor').text(currentColor);
+    $('#nPLayer').text(currentColor == redChip ? 'One' : 'Two');
 }
 
 function checkWin() {
