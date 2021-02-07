@@ -2,19 +2,18 @@
 // playerRed = prompt("Player Two is playing red chips \n Enter your name: ")
 //
 
+
 chipHeight = 7
 bottomChipHeight = 35
 var redChip = '🔴'
 var blueChip = '🔵'
 var currentColor = redChip
-$('#helpMessageChipColorIndicator').text(redChip)
+
 rgbRedColor = 'rgb(255, 0, 0)'
 rgbBlueColor = 'rgb(0, 0, 255)'
 rgbNoChipColorGrey = 'rgb(128, 128, 128)'
 
-var circles = $('.circle')
-
-function addChipToLowestLevelInColumn(columnNumber, chip) {
+function addChipToLowestLevelInColumn(columnNumber, chip, circles) {
     if (circles.eq(columnNumber).css('background-color') == rgbNoChipColorGrey) {
         bottomChipHeight = 35
         for (var currentLevel = bottomChipHeight + columnNumber; currentLevel >= 0; currentLevel -= chipHeight) {
@@ -33,7 +32,7 @@ function changeColor() {
     $('#textPLayerNumber').text(currentColor == redChip ? 'One' : 'Two')
 }
 
-function checkWinAndAlertOnWin() {
+function checkWinAndAlertOnWin(circles) {
     numberOfColumns = 7
     var redWins = 4
     var blueWins = -4
@@ -67,11 +66,25 @@ function checkWinAndAlertOnWin() {
     //diagonaltoprightsided
 }
 
+function createBoard(){
+    console.log("Board created")
+}
 
-$('.game_column').each(function (i, column) {
-    $(column).click(function () {
-        addChipToLowestLevelInColumn($(column).attr('id'), currentColor);
-        changeColor();
-        checkWinAndAlertOnWin();
+function initialize(){
+    createBoard()
+
+    $('#helpMessageChipColorIndicator').text(redChip)
+
+    $('.game_column').each(function (i, column) {
+        var circles = $('.circle')
+        $(column).click(function () {
+            addChipToLowestLevelInColumn($(column).attr('id'), currentColor, circles);
+            changeColor();
+            checkWinAndAlertOnWin(circles);
+        })
     })
-});
+}
+
+initialize()
+
+
